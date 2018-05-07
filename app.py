@@ -5,9 +5,6 @@ URL = 'https://api.fortnitetracker.com/v1/profile/pc/{}'
 
 headers = {'TRN-API-Key' : 'YOUR KEY'}
 
-#res = requests.get(URL, headers=headers)
-#result = res.json()['lifeTimeStats']
-
 app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'] )
@@ -47,8 +44,6 @@ def my_player_data(api_data):
         temporary_dict['matches'] = r['value']
 
   return temporary_dict
-
-#print(my_player_data(result))
 
 if __name__ == '__main__':
   app.run(debug=True)
