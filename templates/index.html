@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+    <title>Fortnite Priv Tool</title>
+</head>
+<body>
+        <section class="hero is-primary">
+                <div class="hero-body">
+                  <div class="container">
+                    <h1 class="title">
+                      Fortnite Priv Stats Tool
+                    </h1>
+                    <h2 class="subtitle">
+                      Basic Fortnite Stats Tool made by KaoZ
+                    </h2>
+                  </div>
+                </div>
+              </section>
+
+                  <section class="section">
+                        <div class="container">
+                                <form method="POST" action="/">
+              <div class="field is-grouped">
+                    <p class="control is-expanded">
+                      <input type="hidden" name="playerOneName" value="{% if p_one %}{{p_one}}{% endif %}">
+                      <input class="input" name="playerName" type="text" placeholder="Player Name">
+                    </p>
+                    <p class="control">
+                      <button class="button is-info">
+                        Search
+                      </button>
+                    </p>
+                  </div>
+                  </form>
+                        </div>
+                      </section>
+
+                      <section class="section">
+                            <div class="container">
+                                    <div class="tile is-ancestor">
+                                              <div class="tile">
+                                                  {% if p_one %}
+                                                <div class="tile is-parent is-vertical">
+                                                  <article class="tile is-child notification is-danger">
+                                                    <p class="title">{{ p_one }}</p>
+                                                    <br>
+                                                    <p class="subtitle">Matches: {{ p_one_stats['matches'] }}</p>
+                                                    <p class="subtitle">Wins: {{ p_one_stats['wins'] }}</p>
+                                                    <p class="subtitle">Kills: {{ p_one_stats['kills'] }}</p>
+                                                  </article>
+                                                </div>
+                                                {% endif %}
+                                                {% if p_two %}
+                                                <div class="tile is-parent">
+                                                  <article class="tile is-child notification is-info">
+                                                    <p class="title">{{ p_two }}</p>
+                                                    <br>
+                                                    <p class="subtitle">Matches: {{ p_two_stats['matches'] }}</p>
+                                                    <p class="subtitle">Wins: {{ p_two_stats['wins'] }}</p>
+                                                    <p class="subtitle">Kills: {{ p_two_stats['kills'] }}</p>
+                                                    </figure>
+                                                  </article>
+                                                </div>
+                                                {% endif %}
+                                              </div>
+                                                </article>
+                                              </div>
+                                            </div>
+                            </div>
+                          </section>
+</body>
+</html>
