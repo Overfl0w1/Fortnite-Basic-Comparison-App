@@ -1,6 +1,6 @@
 # Fortnite-Basic-Comparison-App
 
-**¡WARNING!** THIS APP IS INTENDED TO **PRIVATE USE ONLY** DUE TO API LIMITATIONS SPECIFIED IN ITS WEB (fortnitetracker.com/site-api)
+**¡WARNING!** THIS APP IS INTENDED TO **PRIVATE USE ONLY** DUE TO API LIMITATIONS SPECIFIED IN ITS [WEB](fortnitetracker.com/site-api)
 
 
 A basic web app made with python for comparing Fortnite stats between two players of the same platform. Using the API from fortnitetracker.com
